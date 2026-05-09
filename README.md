@@ -1,14 +1,14 @@
 # System Monitoring Dashboard
 
 ## Overview
-A Python-based monitoring system for tracking CPU, memory, and process-level activity with logging and runtime analysis.
+A lightweight Python-based monitoring system designed to track CPU and memory usage through REST APIs. The project focuses on system visibility, runtime monitoring, and backend reliability.
 
 ## Features
-- CPU and memory monitoring
-- Process activity tracking
-- Logging and failure detection
-- REST API support
-- Runtime analysis
+- Real-time CPU monitoring
+- Memory usage tracking
+- REST API endpoint
+- JSON-based responses
+- Runtime behavior analysis
 
 ## Tech Stack
 - Python
@@ -17,19 +17,48 @@ A Python-based monitoring system for tracking CPU, memory, and process-level act
 - REST APIs
 - Linux
 
-## Project Goals
-- Improve system visibility
-- Detect abnormal runtime behavior
-- Analyze system performance
+## Project Structure
 
-## Future Improvements
-- Real-time dashboard
-- Docker deployment
-- Alert notifications
-- Database integration
+```bash
+system-monitoring-dashboard/
+│
+├── app.py
+├── requirements.txt
+└── README.md
+```
 
-## How to Run
+## API Endpoint
+
+```bash
+/system
+```
+
+### Sample Response
+
+```json
+{
+  "cpu_percent": 15.4,
+  "memory_percent": 42.1
+}
+```
+
+## Setup Instructions
+
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
-python main.py
+```
+
+### Run application
+
+```bash
+python app.py
+```
+
+## Future Improvements
+- Docker deployment
+- Real-time dashboard
+- Alert notification system
+- Database integration
+- Process-level analytics
