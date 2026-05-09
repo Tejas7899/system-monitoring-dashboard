@@ -11,5 +11,11 @@ def system_info():
     }
     return jsonify(data)
 
+@app.route('/health')
+def health():
+    return jsonify({
+        "status": "running"
+    })
+
 if __name__ == '__main__':
     app.run(debug=True)
